@@ -1,2 +1,6 @@
 # created by LocalStack
 sudo: required
+services:
+- docker
+script:
+- docker run localstack/localstack & ; sleep 10
