@@ -4,4 +4,4 @@ services:
 - docker
 script:
 - docker run localstack/localstack & sleep 10
-- curl -X POST -d '{}' -H 'content-type: application/x-amz-json-1.1' -H 'x-amz-target: Kinesis_20131202.ListStreams' -H 'x-amz-date: 20170812T165727Z' -H 'authorization: AWS4-HMAC-SHA256 Credential=AKIAI36YIRRP4F6JUABA/20170812/us-east-1/kinesis/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=10ace1ac8756414f318d92eb5c60dbe1684f2a420f79c452e92a124b7615deb6' http://localhost:4565
+- "curl -X POST -d '{}' -H 'content-type: application/x-amz-json-1.1' -H 'x-amz-target: Kinesis_20131202.ListStreams' -H 'x-amz-date: 20170812T165727Z' -H 'authorization: AWS4-HMAC-SHA256 Credential=AKIAI36YIRRP4F6JUABA/20170812/us-east-1/kinesis/aws4_request, SignedHeaders=content-type;host;x-amz-date;x-amz-target, Signature=10ace1ac8756414f318d92eb5c60dbe1684f2a420f79c452e92a124b7615deb6' http://localhost:4565"
