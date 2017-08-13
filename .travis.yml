@@ -4,5 +4,5 @@ services:
 - docker
 script:
 - pip install -q localstack; docker pull localstack/localstack; localstack start --docker
-  & sleep 10
+  & sleep 20
 - pip install -q awscli-local; awslocal kinesis list-streams
