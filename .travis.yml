@@ -3,6 +3,6 @@ sudo: required
 services:
 - docker
 script:
-- pip install -q localstack; docker pull localstack/localstack; localstack start --docker
+- echo $LICENSE_KEY | md5; pip install -q localstack; docker pull localstack/localstack; localstack start --docker
   & sleep 20
 - pip install -q awscli-local; awslocal kinesis list-streams
