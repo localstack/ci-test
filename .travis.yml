@@ -3,6 +3,7 @@ sudo: required
 services:
 - docker
 script:
+- sudo ifconfig eth0:0 200.200.55.55 netmask 255.255.255.0 up
 - pip install -q localstack; docker pull localstack/localstack; localstack start --docker
   & sleep 20
 - pip install -q awscli-local
