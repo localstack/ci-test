@@ -3,8 +3,8 @@ sudo: required
 services:
 - docker
 script:
-- docker pull localstack/localstack; docker run -p 4567-4582:4567-4582 localstack/localstack
-  & sleep 10
+- pip install localstack; docker pull localstack/localstack; docker run -e LICENSE_KEY=$LICENSE_KEY
+  -p 4567-4582:4567-4582 localstack/localstack & sleep 10
 - "curl -X POST -d '{}' -H 'content-type: application/x-amz-json-1.1' -H 'x-amz-target:\
   \ Kinesis_20131202.ListStreams' -H 'x-amz-date: 20170812T165727Z' -H 'authorization:\
   \ AWS4-HMAC-SHA256 Credential=AKIAI36YIRRP4F6JUABA/20170812/us-east-1/kinesis/aws4_request,\
