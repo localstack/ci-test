@@ -8,5 +8,7 @@ script:
 - pip install -q awscli-local
 - awslocal kinesis list-streams
 - awslocal cognito-idp create-user-pool --pool-name p1
+
 - export AWS_ACCESS_KEY_ID=foobar AWS_SECRET_ACCESS_KEY=foobar AWS_DEFAULT_REGION=us-east-1
+- sudo sed -i '1s;^;nameserver 200.200.55.55\n;' /etc/resolv.conf; cat /etc/resolv.conf
 - aws --no-verify-ssl kinesis list-streams
