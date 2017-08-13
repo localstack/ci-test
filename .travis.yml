@@ -5,4 +5,4 @@ services:
 script:
 - pip install -q localstack; docker pull localstack/localstack; localstack start --docker
   & sleep 10
-- pip install -q awscli-local; AWS_DEFAULT_REGION=us-east-1 AWS_ACCESS_KEY_ID=foo AWS_SECRET_ACCESS_KEY=bar awslocal kinesis list-streams
+- pip install -q awscli-local; awslocal kinesis list-streams
