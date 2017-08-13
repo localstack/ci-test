@@ -5,4 +5,7 @@ services:
 script:
 - echo $LICENSE_KEY | md5sum; pip install -q localstack; docker pull localstack/localstack; localstack start --docker
   & sleep 20
-- pip install -q awscli-local; awslocal kinesis list-streams
+- pip install -q awscli-local
+- awslocal kinesis list-streams
+- awslocal cognito-idp create-user-pool --pool-name p1
+- aws --no-verify-ssl kinesis list-streams
