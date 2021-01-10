@@ -1,3 +1,3 @@
-# ci-test
-Test project to experiment with CI integration
+# LocalStack Misc Tests
 
+Test project to experiment with various features in LocalStack (CI integration, Local Cloud Pods, etc).

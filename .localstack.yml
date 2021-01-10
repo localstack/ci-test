@@ -1,0 +1,10 @@
+pods:
+  pod1:
+    backend: git
+    url: ssh://git@github.com/localstack/misc-tests.git
+    # url: git://localhost:4510/test
+    branch: pod-test
+  pod2:
+    backend: git
+    url: ssh://git@github.com/localstack/misc-tests.git
+    branch: pod-test-2
